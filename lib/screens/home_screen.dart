@@ -228,30 +228,114 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 35,
             ),
             Container(
+              height: MediaQuery.of(context).size.height/4,
               padding: EdgeInsets.only(left: 50, right: 50),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Name :"),
-                      Text("Phone Number :"),
-                      Text("Email ID :"),
-                      Text("Blood Group :"),
-                    ],
+                  Container(
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    height: 45,
+                    //width: MediaQuery.of(context).size.width/3,
+                    decoration: BoxDecoration(
+                      color: Color3,
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(Icons.person, color: Colors.white,),
+                        SizedBox(width: 20,),
+                        Text("${loggedInUser.name}", style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15
+                        ),)
+                      ],
+                    ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text("${loggedInUser.name}"),
-                      Text("${loggedInUser.phone}"),
-                      Text("${loggedInUser.email}"),
-                      Text("${loggedInUser.blood}"),
-                    ],
-                  )
+                  //SizedBox(height: 10,),
+                  Container(
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    height: 45,
+                    //width: MediaQuery.of(context).size.width/3,
+                    decoration: BoxDecoration(
+                      color: Color3,
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(Icons.phone, color: Colors.white,),
+                        SizedBox(width: 20,),
+                        Text("+91 ${loggedInUser.phone}", style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15
+                        ),)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    height: 45,
+                    //width: MediaQuery.of(context).size.width/3,
+                    decoration: BoxDecoration(
+                      color: Color3,
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(Icons.mail, color: Colors.white,),
+                        SizedBox(width: 20,),
+                        Text("${loggedInUser.email}", style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15
+                        ),)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    height: 45,
+                    //width: MediaQuery.of(context).size.width/3,
+                    decoration: BoxDecoration(
+                      color: Color3,
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Icon(Icons.bloodtype, color: Colors.white,),
+                        SizedBox(width: 20,),
+                        Text("A/B/AB/O", style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15
+                        ),)
+                      ],
+                    ),
+                  ),
                 ],
-              ),
+              )
             ),
             SizedBox(
               height: 55,
