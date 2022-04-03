@@ -198,7 +198,7 @@ class _ContactSelectScreenState extends State<ContactSelectScreen> {
           print('${loggedInUser.name}');
           //sendSms();
           for (int i = 0; i < number.length; i++) {
-            //sendSms(number[i].toString());
+            sendSms(number[i].toString(), '12.8166245,80.0393164');
           }
           Fluttertoast.showToast(msg: "Emergency SOS SMS Sent");
           //Fluttertoast.showToast(msg: "Emergency Contact Details Added");
